@@ -783,9 +783,9 @@ function App() {
         text.includes("add to home screen")
       ) {
         if (deferredPrompt) {
-          speakResponse("Opening the portfolio installation prompt.");
+          speakResponse("Install is not available through voice right now. Please click the Install App button in the navigation bar, or use Chrome's menu and select Install Page.");
 
-          setVoiceStatus("Opening app installation prompt.");
+          setVoiceStatus("Use the navbar Install App button or Chrome menu.");
 
           deferredPrompt.prompt();
 
