@@ -2814,6 +2814,7 @@ function App() {
           className="reveal border-t border-white/10 px-8 py-28 md:px-20"
         >
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+            {/* LEFT CONTENT */}
             <div>
               <p className="mb-6 text-xs tracking-[4px]">GET IN TOUCH</p>
 
@@ -2835,47 +2836,75 @@ function App() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-[#141414] p-8">
-              <h3 className="mb-8 text-2xl font-bold">Send a Message</h3>
+            {/* RIGHT CONTACT CARD */}
+            <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#141414] p-8 transition-all duration-500 hover:border-[#E53945]/40">
+              {/* Background Glow */}
+              <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#E53945]/10 blur-[90px] transition-all duration-500 group-hover:bg-[#E53945]/20" />
 
-              <div className="space-y-6">
-                <div>
-                  <label className="mb-3 block text-sm">Your Name</label>
+              <div className="relative">
+                {/* Card Header */}
+                <div className="mb-10 flex items-center justify-between">
+                  <h3 className="text-2xl font-bold">Let's Connect</h3>
 
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    className="w-full rounded-lg border border-white/20 bg-[#090909] px-4 py-4 text-white placeholder:text-white/50 outline-none focus:border-[#E53945]"
-                  />
+                  <span className="rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1.5 text-xs text-green-400">
+                    <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
+                    Available
+                  </span>
                 </div>
 
-                <div>
-                  <label className="mb-3 block text-sm">Email Address</label>
+                {/* Name */}
+                <div className="mb-8">
+                  <p className="mb-3 font-mono text-xs uppercase tracking-[3px] text-white/40">
+                    // Name
+                  </p>
 
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full rounded-lg border border-white/20 bg-[#090909] px-4 py-4 text-white placeholder:text-white/50 outline-none focus:border-[#E53945]"
-                  />
+                  <p className="border-b border-white/10 pb-4 text-xl font-medium text-white">
+                    Priyanshu
+                  </p>
                 </div>
 
+                {/* Email */}
                 <div>
-                  <label className="mb-3 block text-sm">Your Message</label>
+                  <p className="mb-3 font-mono text-xs uppercase tracking-[3px] text-white/40">
+                    // Email
+                  </p>
 
-                  <textarea
-                    rows="5"
-                    placeholder="Tell me about your idea..."
-                    className="w-full resize-none rounded-lg border border-white/20 bg-[#090909] px-4 py-4 text-white placeholder:text-white/50 outline-none focus:border-[#E53945]"
-                  />
+                  <p className="break-all border-b border-white/10 pb-4 text-lg font-medium text-white">
+                    priyanshuworks0607@gmail.com
+                  </p>
                 </div>
 
-                <button
-                  type="button"
-                  disabled
-                  className="w-full cursor-not-allowed rounded-full bg-[#E53945] px-7 py-4 font-semibold text-white opacity-70"
+                {/* Message */}
+                <div className="mt-10 rounded-xl border border-[#E53945]/20 bg-[#E53945]/5 p-5">
+                  <p className="mb-3 font-mono text-xs text-[#E53945]">
+                    &gt; LET'S_BUILD_SOMETHING
+                  </p>
+
+                  <p className="text-sm leading-7 text-white/60">
+                    Have an idea or a project in mind? You can contact me
+                    directly through my email. I'd love to hear from you!
+                  </p>
+                </div>
+
+                {/* Email Button */}
+
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=priyanshuworks0607%40gmail.com&su=Let's%20Connect%20-%20Portfolio&body=Hi%20Priyanshu%2C%0A%0AI'm%20reaching%20out%20regarding..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/btn relative mt-7 flex w-full items-center justify-between overflow-hidden rounded-xl bg-[#E53945] px-6 py-5 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#ff4754] hover:shadow-[0_12px_35px_rgba(229,57,69,0.25)]"
                 >
-                  Message System Coming Soon
-                </button>
+                  <span>Contact via Email</span>
+
+                  <span className="text-xl transition-transform duration-300 group-hover/btn:-translate-y-1 group-hover/btn:translate-x-1">
+                    ↗
+                  </span>
+                </a>
+
+                {/* Footer */}
+                <p className="mt-5 text-center font-mono text-[10px] tracking-[2px] text-white/30">
+                  SYSTEM STATUS: READY TO CONNECT
+                </p>
               </div>
             </div>
           </div>
