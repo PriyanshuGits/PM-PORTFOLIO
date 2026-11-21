@@ -2889,13 +2889,29 @@ function App() {
                 {/* Email Button */}
 
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=priyanshuworks0607%40gmail.com&su=Let's%20Connect%20-%20Portfolio&body=Hi%20Priyanshu%2C%0A%0AI'm%20reaching%20out%20regarding..."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=priyanshuworks0607@gmail.com&su=Lets%20Work%20Together"
+                  onClick={(e) => {
+                    const isMobile = /Android|iPhone|iPad|iPod/i.test(
+                      navigator.userAgent
+                    );
+
+                    if (isMobile) {
+                      e.preventDefault();
+
+                      const gmailAppLink =
+                        "googlegmail:///co?to=priyanshuworks0607@gmail.com&subject=Lets%20Work%20Together";
+
+                      window.location.href = gmailAppLink;
+
+                      setTimeout(() => {
+                        window.location.href =
+                          "https://mail.google.com/mail/?view=cm&fs=1&to=priyanshuworks0607@gmail.com&su=Lets%20Work%20Together";
+                      }, 1500);
+                    }
+                  }}
                   className="group/btn relative mt-7 flex w-full items-center justify-between overflow-hidden rounded-xl bg-[#E53945] px-6 py-5 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#ff4754] hover:shadow-[0_12px_35px_rgba(229,57,69,0.25)]"
                 >
                   <span>Contact via Email</span>
-
                   <span className="text-xl transition-transform duration-300 group-hover/btn:-translate-y-1 group-hover/btn:translate-x-1">
                     ↗
                   </span>
