@@ -1686,16 +1686,16 @@ function App() {
       liveUrl: "https://pm-nexora.vercel.app/",
     },
     {
-      number: "04",
-      name: "PM Chat",
-      category: "COMMUNICATION PLATFORM",
+      number: "03",
+      name: "PM STREET RACER",
+      category: "3D OPEN WORLD RACING GAME",
       description:
-        "An upcoming cross-device chat platform concept with group conversations and real-time communication features.",
-      technologies: ["React", "Real-time Communication"],
-      status: "PLANNED",
-      symbol: "✉",
-      filter: "Upcoming",
-      liveUrl: "",
+        "A cyberpunk open-world racing experience featuring a procedural 3D city, dynamic weather, traffic, drifting, nitro and mobile touch controls.",
+      technologies: ["React", "Three.js", "React Three Fiber"],
+      status: "COMPLETED",
+      symbol: "🏎️",
+      filter: "3D & Creative",
+      liveUrl: "https://pm-street-racer.vercel.app/",
     },
   ];
 
@@ -2296,41 +2296,39 @@ function App() {
                     </div>
                   )}
 
-                  {project.name === "PM Chat" && (
-                    <div className="chat-preview relative z-10 w-[70%] rounded-xl border border-white/15 bg-[#101010]/95 p-4 shadow-[0_0_45px_rgba(229,57,69,0.18)] transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105">
-                      <div className="mb-4 flex items-center gap-3 border-b border-white/10 pb-3">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#E53945] text-sm">
-                          PM
-                        </div>
+                  {project.name === "PM STREET RACER" && (
+                    <div className="racer-preview relative z-10 flex h-48 w-64 items-center justify-center overflow-hidden rounded-2xl border border-cyan-400/30 bg-gradient-to-br from-[#101827] via-[#090b16] to-black shadow-[0_0_45px_rgba(0,220,255,0.18)] transition-transform duration-500 group-hover:-translate-y-2">
+                      <div
+                        className="absolute inset-0 opacity-30"
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(rgba(0,220,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0,220,255,.15) 1px, transparent 1px)",
+                          backgroundSize: "22px 22px",
+                        }}
+                      />
 
-                        <div>
-                          <div className="text-xs font-semibold text-white">
-                            PM Chat
-                          </div>
-                          <div className="text-[9px] text-white/40">
-                            Communication concept
-                          </div>
-                        </div>
-
-                        <span className="ml-auto h-2 w-2 rounded-full bg-[#E53945]" />
+                      <div className="absolute left-3 top-3 text-[9px] tracking-[3px] text-cyan-300">
+                        PM STREET RACER
                       </div>
 
-                      <div className="space-y-3">
-                        <div className="w-fit rounded-xl rounded-tl-sm bg-white/10 px-3 py-2 text-[9px] text-white/70">
-                          Hey! Welcome to PM Chat.
+                      <div className="relative z-10 text-center">
+                        <div className="text-6xl drop-shadow-[0_0_18px_rgba(0,220,255,.7)]">
+                          🏎️
                         </div>
-
-                        <div className="ml-auto w-fit rounded-xl rounded-tr-sm bg-[#E53945]/80 px-3 py-2 text-[9px] text-white">
-                          Let's build something.
+                        <div className="mt-2 text-xs font-bold tracking-[3px] text-white">
+                          NIGHT DRIVE
                         </div>
-
-                        <div className="w-fit rounded-xl rounded-tl-sm bg-white/10 px-3 py-2 text-[9px] text-white/70">
-                          Sounds good!
+                        <div className="mt-1 text-[9px] tracking-widest text-cyan-300">
+                          OPEN WORLD • 3D
                         </div>
                       </div>
 
-                      <div className="mt-4 rounded-full border border-white/10 px-3 py-2 text-[9px] text-white/30">
-                        Type a message...
+                      <div className="absolute bottom-3 left-3 text-[10px] text-white/60">
+                        SPEED <span className="text-cyan-300">240 KM/H</span>
+                      </div>
+
+                      <div className="absolute bottom-3 right-3 text-[10px] text-white/60">
+                        NITRO <span className="text-cyan-300">ON</span>
                       </div>
                     </div>
                   )}
