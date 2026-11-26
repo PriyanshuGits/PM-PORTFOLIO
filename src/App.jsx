@@ -1697,10 +1697,28 @@ function App() {
       filter: "3D & Creative",
       liveUrl: "https://pm-street-racer.vercel.app/",
     },
+    {
+      number: "04",
+      name: "PM FORGE",
+      category: "AI WEBSITE BUILDER",
+      description:
+        "An AI-powered website creation platform with structured page generation, project management, user authentication and a unified backend powered by Ollama.",
+      technologies: ["React", "Vite", "Node.js", "Ollama", "REST API"],
+      status: "COMPLETED",
+      symbol: "✦",
+      filter: "AI & Tools",
+      liveUrl: "https://pm-forge-mu.vercel.app/",
+    },
   ];
 
   // FEATURE 29: PROJECT FILTERS
-  const projectFilters = ["All", "3D & Creative", "SaaS", "Upcoming"];
+  const projectFilters = [
+    "All",
+    "3D & Creative",
+    "SaaS",
+    "AI & Tools",
+    "Upcoming",
+  ];
 
   const filteredProjects =
     activeProjectFilter === "All"
@@ -2333,6 +2351,50 @@ function App() {
                     </div>
                   )}
 
+                  {project.name === "PM FORGE" && (
+                    <div className="relative z-10 flex h-48 w-64 items-center justify-center overflow-hidden rounded-2xl border border-violet-400/30 bg-gradient-to-br from-[#171027] via-[#0b0b16] to-black shadow-[0_0_45px_rgba(139,92,246,0.18)] transition-transform duration-500 group-hover:-translate-y-2">
+                      <div
+                        className="absolute inset-0 opacity-25"
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(rgba(167,139,250,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(167,139,250,.18) 1px, transparent 1px)",
+                          backgroundSize: "22px 22px",
+                        }}
+                      />
+
+                      <div className="absolute left-3 top-3 text-[9px] tracking-[3px] text-violet-300">
+                        PM FORGE / AI STUDIO
+                      </div>
+
+                      <div className="relative z-10 w-[78%] rounded-xl border border-violet-300/20 bg-[#11101b]/90 p-3 shadow-2xl">
+                        <div className="mb-3 flex items-center justify-between">
+                          <span className="text-[10px] font-semibold tracking-[2px] text-white">
+                            FORGE WORKSPACE
+                          </span>
+
+                          <span className="rounded-full border border-violet-300/30 px-2 py-1 text-[8px] text-violet-200">
+                            OLLAMA
+                          </span>
+                        </div>
+
+                        <div className="mb-2 rounded-lg border border-white/10 bg-white/[0.04] p-2 text-[9px] text-white/50">
+                          Describe your next website...
+                        </div>
+
+                        <div className="flex items-center justify-between">
+                          <span className="text-[9px] text-violet-200">
+                            ✦ AI GENERATION
+                          </span>
+                          <span className="h-1.5 w-12 rounded-full bg-violet-400/70" />
+                        </div>
+                      </div>
+
+                      <div className="absolute bottom-3 right-3 text-[9px] tracking-widest text-violet-200/70">
+                        BUILD • CREATE • SHIP
+                      </div>
+                    </div>
+                  )}
+
                   <span className="absolute bottom-6 right-7 z-20 text-xs tracking-widest text-white/40">
                     PM SYSTEMS
                   </span>
@@ -2371,7 +2433,8 @@ function App() {
 
                   <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-5">
                     <span className="text-xs tracking-widest text-white/40">
-                      {project.number} / 04
+                      {project.number} /{" "}
+                      {String(projects.length).padStart(2, "0")}
                     </span>
 
                     <span className="text-sm text-white/50 transition-colors group-hover:text-[#E53945]">
